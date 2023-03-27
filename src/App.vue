@@ -1,11 +1,13 @@
 <script>
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import FooterBanner from './components/FooterBanner.vue';
 
 export default {
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    FooterBanner
   }
 }
 </script>
@@ -24,6 +26,9 @@ export default {
 
   <!-- Footer -->
   <TheFooter />
+
+  <!-- Footer Banner -->
+  <FooterBanner />
 </template>
 
 <style lang="scss">

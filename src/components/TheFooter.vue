@@ -172,6 +172,9 @@ export default {
 footer {
     height: variables.$footer-height;
     background-image: url("../assets/footer-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     overflow: hidden;
 
