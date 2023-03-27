@@ -40,8 +40,8 @@ export default {
     <div id="banner">
         <div class="h-100 container container-xl d-flex justify-content-around align-items-center">
             <div class="banner-item d-flex align-items-center" v-for="item in bannerItems">
-                <img :src="getImagePath(item.image)" :alt="item.text">
-                <span><a href="#">{{ item.text }}</a></span>
+                <a href="#"><img :src="getImagePath(item.image)" :alt="item.text"></a>
+                <span class="banner-text"><a href="#">{{ item.text }}</a></span>
             </div>
         </div>
     </div>
@@ -61,9 +61,22 @@ export default {
     gap: 20px;
     height: 100%;
 
-    img {
-        display: inline-block;
-        height: 30%;
+    a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+
+        img {
+            display: inline-block;
+            height: 30%;
+        }
+
+        &:hover {
+            scale: 1.1;
+        }
+
+
     }
 
     span {
@@ -79,6 +92,16 @@ export default {
                 color: variables.$color-secondary;
             }
         }
+    }
+}
+
+.banner-text {
+    display: none;
+}
+
+@media all and (min-width: 992px) {
+    .banner-text {
+        display: inline-block;
     }
 }
 </style>

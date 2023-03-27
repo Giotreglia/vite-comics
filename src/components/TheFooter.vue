@@ -180,7 +180,7 @@ footer {
 
     #footer-nav-container {
 
-        padding: 50px 0;
+        padding: 50px 20px;
         display: flex;
         gap: 20px;
 
@@ -196,6 +196,7 @@ footer {
     left: 55%;
     top: -20%;
     height: 140%;
+    z-index: 0;
 }
 
 
@@ -214,6 +215,13 @@ footer {
             color: white;
             text-decoration: underline;
         }
+    }
+}
+
+@media all and (min-width: 576px) {
+    #footer-nav-container {
+
+        padding: 50px 20px;
     }
 }
 </style>

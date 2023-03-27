@@ -3,6 +3,7 @@ export default {
     name: "TheHeader",
     data() {
         return {
+            dropdown: true,
             navLinks: [
                 {
                     href: "#characters",
@@ -59,12 +60,23 @@ export default {
             </div>
 
             <nav>
-                <ul id="nav-list" class="d-flex m-0">
+                <ul id="nav-list" class="m-0">
                     <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{ link.text.toLocaleUpperCase()
                     }}</a></li>
                 </ul>
-
-
+                <div id="dropdown-container">
+                    <div @click="dropdown = !dropdown">
+                        <button class="hamburger" v-if="dropdown"><i class="fa-solid fa-bars"></i></button>
+                        <button class="hamburger" v-else><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div id="dropdown" v-if="!dropdown">
+                        <ul id="nav-list-dropdown" class="d-flex m-0">
+                            <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{
+                                link.text.toLocaleUpperCase()
+                            }}</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
 
         </div>
@@ -97,6 +109,7 @@ export default {
     gap: 20px;
     font-weight: bold;
     height: 100%;
+    display: none;
 
     .nav-item {
         position: relative;
@@ -131,6 +144,58 @@ export default {
             }
         }
 
+    }
+}
+
+
+#dropdown {
+    position: absolute;
+    top: variables.$header-height;
+    right: 0;
+    z-index: 9999;
+}
+
+#close-dropdown {
+    position: absolute;
+    right: 80px;
+    top: 40px;
+    font-size: 30px;
+}
+
+#nav-list-dropdown {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+    width: 50vw;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 5px;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.hamburger {
+    color: black;
+    font-size: 30px;
+    border: 0;
+    background-color: transparent;
+}
+
+
+@media all and (min-width: 992px) {
+    #nav-list {
+        display: flex;
+    }
+
+    #dropdown-container {
+        display: none;
     }
 }
 </style>

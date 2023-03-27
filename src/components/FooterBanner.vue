@@ -17,7 +17,7 @@ export default {
             </div>
 
             <div class="h-100 d-flex align-items-center">
-                <h4>FOLLOW US</h4>
+                <h4 id="follow-claim">FOLLOW US</h4>
                 <a class="social" href="#"><img src="../assets/footer-facebook.png" alt="logo facebook"></a>
                 <a class="social" href="#"><img src="../assets/footer-twitter.png" alt="logo facebook"></a>
                 <a class="social" href="#"><img src="../assets/footer-youtube.png" alt="logo facebook"></a>
@@ -49,7 +49,7 @@ export default {
 #banner-btn {
     padding: 12px 20px;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 12px;
     border: 2px solid variables.$color-primary;
     transition: all 0.2s;
 
@@ -77,5 +77,20 @@ export default {
         background-color: white;
         border-radius: 50%;
     }
+}
+
+#follow-claim {
+    display: none;
+}
+
+@media all and (min-width: 768px) {
+    #follow-claim {
+        display: inline-block;
+    }
+
+    #banner-btn {
+        font-size: 20px;
+    }
+
 }
 </style>
