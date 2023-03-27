@@ -194,7 +194,7 @@ footer {
 #footer-logo {
     position: absolute;
     left: 55%;
-    top: -100px;
+    top: -20%;
     height: 140%;
 }
 

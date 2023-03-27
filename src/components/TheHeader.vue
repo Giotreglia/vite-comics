@@ -59,10 +59,12 @@ export default {
             </div>
 
             <nav>
-                <ul id="nav-list" class="d-flex">
+                <ul id="nav-list" class="d-flex m-0">
                     <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{ link.text.toLocaleUpperCase()
                     }}</a></li>
                 </ul>
+
+
             </nav>
 
         </div>
@@ -115,7 +117,7 @@ export default {
             &::after {
                 content: "";
                 position: absolute;
-                bottom: -8px;
+                bottom: 0;
                 left: -15%;
                 height: 5px;
                 width: 130%;
