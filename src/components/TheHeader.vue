@@ -104,7 +104,7 @@ export default {
         a {
             text-decoration: none;
             display: inline-block;
-            line-height: 60px;
+            line-height: 118px;
             color: black;
             transition: all 0.2s;
 
@@ -115,10 +115,10 @@ export default {
             &::after {
                 content: "";
                 position: absolute;
-                bottom: -25px;
-                left: 2px;
+                bottom: -8px;
+                left: -15%;
                 height: 5px;
-                width: 100%;
+                width: 130%;
                 background-color: variables.$color-primary;
                 opacity: 0;
                 transition: all 0.2s;
