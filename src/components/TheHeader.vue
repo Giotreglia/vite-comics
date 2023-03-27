@@ -60,7 +60,8 @@ export default {
 
             <nav>
                 <ul id="nav-list" class="d-flex">
-                    <li class="nav-item" v-for="link in navLinks" :href="link.href">{{ link.text }}</li>
+                    <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{ link.text.toLocaleUpperCase()
+                    }}</a></li>
                 </ul>
             </nav>
 
@@ -100,21 +101,34 @@ export default {
         cursor: pointer;
         line-height: 60px;
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -25px;
-            left: 2px;
-            height: 5px;
-            width: 100%;
-            background-color: variables.$color-primary;
-            opacity: 0;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            line-height: 60px;
+            color: black;
             transition: all 0.2s;
+
+            &:hover {
+                color: variables.$color-primary;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -25px;
+                left: 2px;
+                height: 5px;
+                width: 100%;
+                background-color: variables.$color-primary;
+                opacity: 0;
+                transition: all 0.2s;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
         }
 
-        &:hover::after {
-            opacity: 1;
-        }
     }
 }
 </style>
