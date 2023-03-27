@@ -71,5 +71,11 @@ export default {
 .social {
     display: inline-block;
     margin: 10px;
+
+    &:hover {
+        scale: 1.1;
+        background-color: white;
+        border-radius: 50%;
+    }
 }
 </style>

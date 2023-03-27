@@ -41,7 +41,7 @@ export default {
         <div class="h-100 container container-xl d-flex justify-content-around align-items-center">
             <div class="banner-item d-flex align-items-center" v-for="item in bannerItems">
                 <img :src="getImagePath(item.image)" :alt="item.text">
-                <span>{{ item.text }}</span>
+                <span><a href="#">{{ item.text }}</a></span>
             </div>
         </div>
     </div>
@@ -69,6 +69,16 @@ export default {
     span {
         font-weight: 400;
         font-size: 20px;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                scale: 1.1;
+                color: variables.$color-secondary;
+            }
+        }
     }
 }
 </style>
