@@ -80,7 +80,7 @@ export default {
 
     #logo-container {
         height: 100%;
-        padding: 20px;
+        padding: 20px 0;
 
         img {
             height: 100%;

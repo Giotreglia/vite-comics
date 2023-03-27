@@ -2,12 +2,14 @@
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import FooterBanner from './components/FooterBanner.vue';
+import Banner from './components/Banner.vue';
 
 export default {
   components: {
     TheHeader,
     TheFooter,
-    FooterBanner
+    FooterBanner,
+    Banner
   }
 }
 </script>
@@ -23,6 +25,9 @@ export default {
       <h1> Content goes here </h1>
     </div>
   </main>
+
+  <!-- Banner -->
+  <Banner />
 
   <!-- Footer -->
   <TheFooter />
