@@ -35,15 +35,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../styles/partials/variables";
-@use "../styles/partials/mixins";
+@use "../styles/partials/variables" as *;
 
 #footer-banner {
-    background-color: variables.$color-secondary;
-    height: variables.$header-height;
+    background-color: $color-secondary;
+    height: $header-height;
 
     h4 {
-        color: variables.$color-primary;
+        color: $color-primary;
         margin-bottom: 0;
         margin-right: 10px;
         font-weight: bolder;
@@ -55,11 +54,11 @@ export default {
     padding: 12px 20px;
     background-color: transparent;
     font-size: 12px;
-    border: 2px solid variables.$color-primary;
+    border: 2px solid $color-primary;
     transition: all 0.2s;
 
     &:hover {
-        background-color: variables.$color-text-grey;
+        background-color: $color-text-grey;
     }
 
     &:active {

@@ -85,12 +85,12 @@ export default {
 
 
 <style scoped lang="scss">
-@use "../styles/partials/variables";
-@use "../styles/partials/mixins";
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
 
 #header-container {
-    height: variables.$header-height;
-    @include mixins.d-flex-space-between-center;
+    height: $header-height;
+    @include d-flex-space-between-center;
 
     #logo-container {
         height: 100%;
@@ -124,7 +124,7 @@ export default {
             transition: all 0.2s;
 
             &:hover {
-                color: variables.$color-primary;
+                color: $color-primary;
             }
 
             &::after {
@@ -134,7 +134,7 @@ export default {
                 left: -15%;
                 height: 5px;
                 width: 130%;
-                background-color: variables.$color-primary;
+                background-color: $color-primary;
                 opacity: 0;
                 transition: all 0.2s;
             }
@@ -150,7 +150,7 @@ export default {
 
 #dropdown {
     position: absolute;
-    top: variables.$header-height;
+    top: $header-height;
     right: 0;
     z-index: 9999;
     text-align: right;

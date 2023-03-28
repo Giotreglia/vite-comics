@@ -48,12 +48,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../styles/partials/variables";
-@use "../styles/partials/mixins";
+@use "../styles/partials/variables" as *;
 
 #banner {
     height: 180px;
-    background-color: variables.$color-primary;
+    background-color: $color-primary;
 }
 
 .banner-item {
@@ -89,7 +88,7 @@ export default {
 
             &:hover {
                 scale: 1.1;
-                color: variables.$color-secondary;
+                color: $color-secondary;
             }
         }
     }

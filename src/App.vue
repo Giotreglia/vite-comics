@@ -38,10 +38,10 @@ export default {
 
 <style lang="scss">
 @use "./styles/general.scss";
-@use "./styles/partials/variables";
+@use "./styles/partials/variables" as *;
 
 main {
-  background-color: variables.$color-secondary-dark;
+  background-color: $color-secondary-dark;
 
   h1 {
     color: white;

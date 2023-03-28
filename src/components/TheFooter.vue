@@ -166,11 +166,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use "../styles/partials/variables";
-@use "../styles/partials/mixins";
+@use "../styles/partials/variables" as *;
 
 footer {
-    height: variables.$footer-height;
+    height: $footer-height;
     background-image: url("../assets/footer-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -209,7 +208,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: variables.$color-text-grey;
+        color: $color-text-grey;
 
         &:hover {
             color: white;
