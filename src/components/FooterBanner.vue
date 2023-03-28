@@ -18,11 +18,16 @@ export default {
 
             <div class="h-100 d-flex align-items-center">
                 <h4 id="follow-claim">FOLLOW US</h4>
-                <a class="social" href="#"><img src="../assets/footer-facebook.png" alt="logo facebook"></a>
-                <a class="social" href="#"><img src="../assets/footer-twitter.png" alt="logo facebook"></a>
-                <a class="social" href="#"><img src="../assets/footer-youtube.png" alt="logo facebook"></a>
-                <a class="social" href="#"><img src="../assets/footer-pinterest.png" alt="logo facebook"></a>
-                <a class="social" href="#"><img src="../assets/footer-periscope.png" alt="logo facebook"></a>
+                <a class="social" href="https://www.facebook.com/" target="_blank"><img src="../assets/footer-facebook.png"
+                        alt="logo facebook"></a>
+                <a class="social" href="https://twitter.com/" target="_blank"><img src="../assets/footer-twitter.png"
+                        alt="logo facebook"></a>
+                <a class="social" href="https://www.youtube.com/" target="_blank"><img src="../assets/footer-youtube.png"
+                        alt="logo facebook"></a>
+                <a class="social" href="https://www.pinterest.it/" target="_blank"><img src="../assets/footer-pinterest.png"
+                        alt="logo facebook"></a>
+                <a class="social" href="https://www.pscp.tv/" target="_blank"><img src="../assets/footer-periscope.png"
+                        alt="logo facebook"></a>
             </div>
 
         </div>

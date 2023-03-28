@@ -153,6 +153,7 @@ export default {
     top: variables.$header-height;
     right: 0;
     z-index: 9999;
+    text-align: right;
 }
 
 #close-dropdown {
