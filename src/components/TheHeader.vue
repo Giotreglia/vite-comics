@@ -1,51 +1,12 @@
 <script>
 export default {
     name: "TheHeader",
+    props: {
+        links: Array
+    },
     data() {
         return {
             dropdown: true,
-            navLinks: [
-                {
-                    href: "#characters",
-                    text: "CHARACTERS",
-                },
-                {
-                    href: "#comics",
-                    text: "COMICS",
-                },
-                {
-                    href: "#movies",
-                    text: "MOVIES",
-                },
-                {
-                    href: "#tv",
-                    text: "TV",
-                },
-                {
-                    href: "#games",
-                    text: "GAMES",
-                },
-                {
-                    href: "#collectibles",
-                    text: "COLLECTIBLES",
-                },
-                {
-                    href: "#videos",
-                    text: "VIDEOS",
-                },
-                {
-                    href: "#fans",
-                    text: "FANS",
-                },
-                {
-                    href: "#news",
-                    text: "NEWS",
-                },
-                {
-                    href: "#shop",
-                    text: "SHOP",
-                }
-            ]
         }
     },
 }
@@ -61,7 +22,8 @@ export default {
 
             <nav>
                 <ul id="nav-list" class="m-0">
-                    <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{ link.text.toLocaleUpperCase()
+                    <li class="nav-item" v-for="(link, i) in links" :key="i"><a :href="link.href">{{
+                        link.text.toLocaleUpperCase()
                     }}</a></li>
                 </ul>
                 <div id="dropdown-container">
@@ -71,7 +33,7 @@ export default {
                     </div>
                     <div id="dropdown" v-if="!dropdown">
                         <ul id="nav-list-dropdown" class="d-flex m-0">
-                            <li class="nav-item" v-for="link in navLinks"><a :href="link.href">{{
+                            <li class="nav-item" v-for="(link, i) in links" :key="i"><a :href="link.href">{{
                                 link.text.toLocaleUpperCase()
                             }}</a></li>
                         </ul>

@@ -1,50 +1,12 @@
 <script>
 export default {
     name: "TheFooter",
+    props: {
+        links: Array
+    },
     data() {
         return {
-            footerLinksComics: [
-                {
-                    href: "#characters",
-                    text: "Characters",
-                },
-                {
-                    href: "#comics",
-                    text: "Comics",
-                },
-                {
-                    href: "#movies",
-                    text: "Movies",
-                },
-                {
-                    href: "#tv",
-                    text: "Tv",
-                },
-                {
-                    href: "#games",
-                    text: "Games",
-                },
-                {
-                    href: "#collectibles",
-                    text: "Collectibles",
-                },
-                {
-                    href: "#videos",
-                    text: "Videos",
-                },
-                {
-                    href: "#fans",
-                    text: "Fans",
-                },
-                {
-                    href: "#news",
-                    text: "News",
-                },
-                {
-                    href: "#shop",
-                    text: "Shop",
-                }
-            ],
+
             footerLinksShop: [
                 {
                     href: "#shopdc",
@@ -137,7 +99,7 @@ export default {
             <div class="footer-left">
                 <h4>DC COMICS</h4>
                 <ul id="footer-nav-list" class="p-0 my-3">
-                    <li class="nav-item" v-for="link in footerLinksComics"><a :href="link.href">{{ link.text }}</a></li>
+                    <li class="nav-item" v-for="(link, i) in links" :key="i"><a :href="link.href">{{ link.text }}</a></li>
                 </ul>
                 <h4>SHOP</h4>
                 <ul id="footer-nav-list" class="p-0 my-3">
@@ -205,6 +167,7 @@ footer {
 #footer-nav-list {
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     a {
         text-decoration: none;
