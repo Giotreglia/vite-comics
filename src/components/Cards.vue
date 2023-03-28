@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "Grid",
+    name: "Cards",
     props: {
         cards: Array
     },
@@ -35,7 +35,7 @@ export default {
 
 #card-container {
     flex-wrap: wrap;
-    padding: 40px 10px;
+    padding: 30px 10px 20px;
     position: relative;
 }
 

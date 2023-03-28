@@ -3,7 +3,7 @@ import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
 import FooterBanner from './components/FooterBanner.vue';
 import Banner from './components/Banner.vue';
-import Grid from './components/Grid.vue';
+import Cards from './components/Cards.vue';
 import Jumbotron from './components/Jumbotron.vue';
 
 
@@ -135,7 +135,7 @@ export default {
     TheFooter,
     FooterBanner,
     Banner,
-    Grid,
+    Cards,
     Jumbotron
   }
 }
@@ -148,7 +148,7 @@ export default {
   <!-- Main -->
   <main>
     <Jumbotron />
-    <Grid :cards="items" />
+    <Cards :cards="items" />
   </main>
 
   <!-- Banner -->
